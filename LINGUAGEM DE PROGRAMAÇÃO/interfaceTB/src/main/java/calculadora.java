@@ -54,6 +54,12 @@ public class calculadora extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Número 2");
 
+        n1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n1ActionPerformed(evt);
+            }
+        });
+
         n2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n2ActionPerformed(evt);
@@ -282,6 +288,10 @@ public class calculadora extends javax.swing.JFrame {
         double resultado = num1 / num2;
         res.setText(String.valueOf(resultado));
     }//GEN-LAST:event_botaoDivide1ActionPerformed
+
+    private void n1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_n1ActionPerformed
 
     /**
      * @param args the command line arguments
