@@ -33,3 +33,14 @@ db.PessoaTB25.findOne()
 
 //findOne({campo_desejado: valor}) retorna uma única consulta com o valor desejado
 db.PessoaTB25.findOne({nome:"Maria"})
+
+//updateOne() atualizar os dados de uma pessoa
+db.PessoaTB25.updateOne({nome:"João"},{$set:{idade:28}})
+
+//find por quantidade, pode usar count() e pretty() também
+// > gt
+// >= gte
+// < lt
+// <= lte
+// != ne
+db.PessoaTB25.find({idade:{$lt:20}})
