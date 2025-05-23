@@ -1,0 +1,35 @@
+//iniciando e verificando -> cmd 
+mongod
+
+//comecar a grenciar as dbs
+mongo
+
+show dbs // Mostra databases
+use PessoaTB25 // Aloca espaço para uma nova db
+
+//insertOne -> "único"
+db.PessoaTB25.insertOne({nome:"Nathan", atividade_extra:["Bass","Jogos"], profissao:"Fazer Crepioca", esta_trabalhando:true})
+
+//Insert com outro tipo (endereco)
+db.PessoaTB25.insertOne({nome:"Pedro Vaz",endereco:{rua:"das Flores",num:1112,CEP:"11122-222"},telefone:"(11)99933-2244"})
+
+//insertMany -> "alguns ou mais de um"
+db.PessoaTB25.insertMany([{nome:"Maria", idade: 60, esta_trabalhando:true},{nome:"João", idade: 10, esta_trabalhando:false},{nome:"Ana Lua",idade:18,esta_trabalhando:true}])
+
+//Mostra tudo que foi inserido na db utilizada
+db.PessoaTB25.find()
+
+//Mostra tudo que foi inserido na db utilizada, porem o .pretty() identa a saída do documento de maneira organizada
+db.PessoaTB25.find().pretty()
+
+//Utilizando o .find({campo_desejado: valor}) para realizar uma consulta específica
+db.PessoaTB25.find({esta_trabalhando:true}).pretty()
+
+//Utilizando o .count() para retornar o número de casos de uma consulta específica
+ db.PessoaTB25.find({esta_trabalhando:true}).count()
+
+//findOne() retorna uma única inserção, sendo essa a a primeira realizada
+db.PessoaTB25.findOne()
+
+//findOne({campo_desejado: valor}) retorna uma única consulta com o valor desejado
+db.PessoaTB25.findOne({nome:"Maria"})
