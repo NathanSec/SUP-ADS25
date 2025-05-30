@@ -117,7 +117,7 @@ public class login extends javax.swing.JFrame {
         jLabel9.setBounds(270, 340, 148, 16);
 
         botao1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botao1.setText("Salvar");
+        botao1.setText("Entrar");
         botao1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao1ActionPerformed(evt);
@@ -195,10 +195,13 @@ public class login extends javax.swing.JFrame {
 
     private void botao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao1ActionPerformed
         // TODO add your handling code here:
+        dispose();
+        new exibirTarefas().setVisible(true);  
     }//GEN-LAST:event_botao1ActionPerformed
 
     private void voltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltar1ActionPerformed
-        // TODO add your handling code here:
+        dispose();
+        new menu().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_voltar1ActionPerformed
 
     private void nome2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nome2FocusGained
