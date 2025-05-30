@@ -64,7 +64,7 @@
                           <EmptySpace min="-2" pref="303" max="-2" attributes="0"/>
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="cadastrar" min="-2" max="-2" attributes="0"/>
+                          <Component id="logar" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -72,7 +72,7 @@
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="289" max="-2" attributes="0"/>
-                      <Component id="cadastrar1" min="-2" pref="210" max="-2" attributes="0"/>
+                      <Component id="cadastrar" min="-2" pref="210" max="-2" attributes="0"/>
                       <EmptySpace pref="301" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -90,14 +90,14 @@
                   <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cadastrar" alignment="3" pref="0" max="32767" attributes="0"/>
+                      <Component id="logar" alignment="3" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="124" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="338" max="32767" attributes="0"/>
-                      <Component id="cadastrar1" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="cadastrar" min="-2" pref="70" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -107,7 +107,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel1">
         </Component>
-        <Component class="javax.swing.JButton" name="cadastrar">
+        <Component class="javax.swing.JButton" name="logar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="ff" red="cc" type="rgb"/>
@@ -124,7 +124,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logarActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel2">
@@ -193,7 +193,7 @@
             <Property name="text" type="java.lang.String" value="J&#xe1; tem cadastro?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="cadastrar1">
+        <Component class="javax.swing.JButton" name="cadastrar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -201,7 +201,7 @@
             <Property name="text" type="java.lang.String" value="Cadastre - se"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrar1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrarActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

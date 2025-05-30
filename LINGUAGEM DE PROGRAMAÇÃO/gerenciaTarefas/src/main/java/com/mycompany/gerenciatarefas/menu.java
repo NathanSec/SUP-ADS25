@@ -28,27 +28,27 @@ public class menu extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        cadastrar = new javax.swing.JButton();
+        logar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        cadastrar1 = new javax.swing.JButton();
+        cadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        cadastrar.setBackground(new java.awt.Color(204, 255, 204));
-        cadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        cadastrar.setForeground(new java.awt.Color(51, 51, 255));
-        cadastrar.setText("Entrar");
-        cadastrar.setBorder(null);
-        cadastrar.addActionListener(new java.awt.event.ActionListener() {
+        logar.setBackground(new java.awt.Color(204, 255, 204));
+        logar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        logar.setForeground(new java.awt.Color(51, 51, 255));
+        logar.setText("Entrar");
+        logar.setBorder(null);
+        logar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastrarActionPerformed(evt);
+                logarActionPerformed(evt);
             }
         });
 
@@ -86,11 +86,11 @@ public class menu extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
         jLabel5.setText("Já tem cadastro?");
 
-        cadastrar1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        cadastrar1.setText("Cadastre - se");
-        cadastrar1.addActionListener(new java.awt.event.ActionListener() {
+        cadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cadastrar.setText("Cadastre - se");
+        cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastrar1ActionPerformed(evt);
+                cadastrarActionPerformed(evt);
             }
         });
 
@@ -111,12 +111,12 @@ public class menu extends javax.swing.JFrame {
                         .addGap(303, 303, 303)
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addComponent(cadastrar)))
+                        .addComponent(logar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(289, 289, 289)
-                    .addComponent(cadastrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(301, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -131,12 +131,12 @@ public class menu extends javax.swing.JFrame {
                 .addGap(216, 216, 216)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(logar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap(124, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(338, Short.MAX_VALUE)
-                    .addComponent(cadastrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(192, 192, 192)))
         );
 
@@ -156,15 +156,17 @@ public class menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void logarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logarActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new login().setVisible(true);
+    }//GEN-LAST:event_logarActionPerformed
+
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
         // TODO add your handling code here:
         dispose();
         new cadastro().setVisible(true);
     }//GEN-LAST:event_cadastrarActionPerformed
-
-    private void cadastrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cadastrar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,7 +205,6 @@ public class menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cadastrar;
-    private javax.swing.JButton cadastrar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -211,5 +212,6 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton logar;
     // End of variables declaration//GEN-END:variables
 }

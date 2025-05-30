@@ -1,21 +1,22 @@
+package com.mycompany.gerenciatarefas;
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.gerenciatarefas;
-
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author 25171227
  */
-public class cadastro extends javax.swing.JFrame {
+public class exibirTarefas extends javax.swing.JFrame {
 
     /**
-     * Creates new form cadastro
+     * Creates new form exibirTarefas
      */
-    public cadastro() {
+    public exibirTarefas() {
         initComponents();
     }
 
@@ -34,13 +35,20 @@ public class cadastro extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        nome1 = new javax.swing.JTextField();
+        data = new javax.swing.JTextField();
         botao1 = new javax.swing.JButton();
         voltar1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        receberemail2 = new javax.swing.JCheckBox();
         jLabel6 = new javax.swing.JLabel();
-        nome2 = new javax.swing.JTextField();
+        titulo = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        descricao = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        categoria = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        area = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        areaNome = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,7 +63,7 @@ public class cadastro extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\25171227\\Downloads\\greenUserIcon.png")); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 36)); // NOI18N
-        jLabel3.setText("Cadastre - se");
+        jLabel3.setText("Nova Tarefa");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -64,7 +72,7 @@ public class cadastro extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 506, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(103, 103, 103))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,26 +99,26 @@ public class cadastro extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 100, 800, 126);
 
-        jLabel5.setText("Senha:");
+        jLabel5.setText("Descrição:");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(270, 300, 35, 16);
+        jLabel5.setBounds(120, 300, 70, 16);
 
-        nome1.setText("********");
-        nome1.addFocusListener(new java.awt.event.FocusAdapter() {
+        data.setText("Limite");
+        data.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                nome1FocusGained(evt);
+                dataFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                nome1FocusLost(evt);
+                dataFocusLost(evt);
             }
         });
-        nome1.addActionListener(new java.awt.event.ActionListener() {
+        data.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nome1ActionPerformed(evt);
+                dataActionPerformed(evt);
             }
         });
-        jPanel1.add(nome1);
-        nome1.setBounds(340, 300, 64, 22);
+        jPanel1.add(data);
+        data.setBounds(210, 380, 130, 22);
 
         botao1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botao1.setText("Salvar");
@@ -120,7 +128,7 @@ public class cadastro extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botao1);
-        botao1.setBounds(350, 420, 72, 27);
+        botao1.setBounds(200, 440, 72, 27);
 
         voltar1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         voltar1.setText("Voltar Menu");
@@ -130,36 +138,89 @@ public class cadastro extends javax.swing.JFrame {
             }
         });
         jPanel1.add(voltar1);
-        voltar1.setBounds(330, 500, 112, 27);
+        voltar1.setBounds(180, 500, 112, 27);
 
-        jLabel10.setText("Deseja receber notificações?");
+        jLabel10.setText("Data-Limite:");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(270, 330, 148, 16);
+        jLabel10.setBounds(120, 380, 80, 16);
 
-        receberemail2.setText("Sim");
-        jPanel1.add(receberemail2);
-        receberemail2.setBounds(430, 330, 70, 20);
-
-        jLabel6.setText("Nome:");
+        jLabel6.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
+        jLabel6.setText("Logado: ");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(270, 260, 50, 16);
+        jLabel6.setBounds(60, 40, 90, 19);
 
-        nome2.setText("Digite seu nome aqui");
-        nome2.addFocusListener(new java.awt.event.FocusAdapter() {
+        titulo.setText("Título");
+        titulo.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                nome2FocusGained(evt);
+                tituloFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                nome2FocusLost(evt);
+                tituloFocusLost(evt);
             }
         });
-        nome2.addActionListener(new java.awt.event.ActionListener() {
+        titulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nome2ActionPerformed(evt);
+                tituloActionPerformed(evt);
             }
         });
-        jPanel1.add(nome2);
-        nome2.setBounds(340, 260, 127, 22);
+        jPanel1.add(titulo);
+        titulo.setBounds(210, 260, 130, 22);
+
+        jLabel7.setText("Nome:");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(120, 260, 50, 16);
+
+        descricao.setText("Descrição");
+        descricao.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                descricaoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                descricaoFocusLost(evt);
+            }
+        });
+        descricao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                descricaoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(descricao);
+        descricao.setBounds(210, 300, 130, 22);
+
+        jLabel11.setText("Categoria: ");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(120, 340, 60, 16);
+
+        categoria.setText("Categoria");
+        categoria.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                categoriaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                categoriaFocusLost(evt);
+            }
+        });
+        categoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                categoriaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(categoria);
+        categoria.setBounds(210, 340, 130, 22);
+
+        area.setColumns(20);
+        area.setRows(5);
+        jScrollPane3.setViewportView(area);
+
+        jPanel1.add(jScrollPane3);
+        jScrollPane3.setBounds(440, 260, 280, 170);
+
+        areaNome.setColumns(20);
+        areaNome.setRows(5);
+        jScrollPane2.setViewportView(areaNome);
+
+        jPanel1.add(jScrollPane2);
+        jScrollPane2.setBounds(130, 40, 120, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -177,27 +238,30 @@ public class cadastro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nome1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nome1FocusGained
+    private void dataFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dataFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome1FocusGained
+    }//GEN-LAST:event_dataFocusGained
 
-    private void nome1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nome1FocusLost
+    private void dataFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dataFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome1FocusLost
+    }//GEN-LAST:event_dataFocusLost
 
-    private void nome1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome1ActionPerformed
+    private void dataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome1ActionPerformed
+    }//GEN-LAST:event_dataActionPerformed
 
     private void botao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao1ActionPerformed
         // TODO add your handling code here:
         int valor = JOptionPane.showConfirmDialog(null, "Deseja realmente salvar?", "Opções", JOptionPane.YES_NO_CANCEL_OPTION);
 
         if (valor == 0) {
-            Pessoa p  = new Pessoa();
-            p.setNome(nome2.getText());
-            dispose();
-            new menu().setVisible(true);
+            Tarefa t = new Tarefa();
+            t.setTitulo(titulo.getText());
+            t.setDescricao(descricao.getText());
+            t.setCategoria(categoria.getText());
+            t.setVence(data.getText());
+            area.setText(t.status());
+            
         } else if (valor == 2) {
             System.exit(0);
         }
@@ -208,17 +272,41 @@ public class cadastro extends javax.swing.JFrame {
         new menu().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_voltar1ActionPerformed
 
-    private void nome2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nome2FocusGained
+    private void tituloFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tituloFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome2FocusGained
+    }//GEN-LAST:event_tituloFocusGained
 
-    private void nome2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nome2FocusLost
+    private void tituloFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tituloFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome2FocusLost
+    }//GEN-LAST:event_tituloFocusLost
 
-    private void nome2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome2ActionPerformed
+    private void tituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nome2ActionPerformed
+    }//GEN-LAST:event_tituloActionPerformed
+
+    private void descricaoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_descricaoFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_descricaoFocusGained
+
+    private void descricaoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_descricaoFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_descricaoFocusLost
+
+    private void descricaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descricaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_descricaoActionPerformed
+
+    private void categoriaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_categoriaFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_categoriaFocusGained
+
+    private void categoriaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_categoriaFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_categoriaFocusLost
+
+    private void categoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_categoriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,37 +325,44 @@ public class cadastro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(exibirTarefas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(exibirTarefas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(exibirTarefas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(exibirTarefas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new cadastro().setVisible(true);
+                new exibirTarefas().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea area;
+    private javax.swing.JTextArea areaNome;
     private javax.swing.JButton botao1;
+    private javax.swing.JTextField categoria;
+    private javax.swing.JTextField data;
+    private javax.swing.JTextField descricao;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField nome1;
-    private javax.swing.JTextField nome2;
-    private javax.swing.JCheckBox receberemail2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextField titulo;
     private javax.swing.JButton voltar1;
     // End of variables declaration//GEN-END:variables
 }
