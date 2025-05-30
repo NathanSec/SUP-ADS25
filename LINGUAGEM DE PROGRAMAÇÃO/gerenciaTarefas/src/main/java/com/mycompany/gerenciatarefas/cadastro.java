@@ -138,7 +138,7 @@ public class cadastro extends javax.swing.JFrame {
 
         receberemail2.setText("Sim");
         jPanel1.add(receberemail2);
-        receberemail2.setBounds(430, 330, 43, 20);
+        receberemail2.setBounds(430, 330, 70, 20);
 
         jLabel6.setText("Nome:");
         jPanel1.add(jLabel6);
@@ -194,6 +194,8 @@ public class cadastro extends javax.swing.JFrame {
         int valor = JOptionPane.showConfirmDialog(null, "Deseja realmente salvar?", "Opções", JOptionPane.YES_NO_CANCEL_OPTION);
 
         if (valor == 0) {
+            Pessoa p  = new Pessoa();
+            p.setNome(nome2.getText());
             dispose();
             new menu().setVisible(true);
         } else if (valor == 2) {

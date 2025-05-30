@@ -33,8 +33,6 @@ public class login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         nome1 = new javax.swing.JTextField();
-        receberemail1 = new javax.swing.JCheckBox();
-        jLabel9 = new javax.swing.JLabel();
         botao1 = new javax.swing.JButton();
         voltar1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -108,14 +106,6 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(nome1);
         nome1.setBounds(340, 300, 64, 22);
 
-        receberemail1.setText("Sim");
-        jPanel1.add(receberemail1);
-        receberemail1.setBounds(430, 340, 43, 20);
-
-        jLabel9.setText("Deseja receber notificações?");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(270, 340, 148, 16);
-
         botao1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botao1.setText("Entrar");
         botao1.addActionListener(new java.awt.event.ActionListener() {
@@ -159,11 +149,11 @@ public class login extends javax.swing.JFrame {
 
         receberemail2.setText("Sim");
         jPanel1.add(receberemail2);
-        receberemail2.setBounds(400, 370, 43, 20);
+        receberemail2.setBounds(400, 350, 43, 20);
 
         jLabel10.setText("Permanecer Logado?");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(270, 370, 120, 16);
+        jLabel10.setBounds(270, 350, 120, 16);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -259,12 +249,10 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField nome1;
     private javax.swing.JTextField nome2;
-    private javax.swing.JCheckBox receberemail1;
     private javax.swing.JCheckBox receberemail2;
     private javax.swing.JButton voltar1;
     // End of variables declaration//GEN-END:variables

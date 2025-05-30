@@ -45,8 +45,10 @@ public class exibirTarefas extends javax.swing.JFrame {
         descricao = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         categoria = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jScrollPane3 = new javax.swing.JScrollPane();
         area = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        areaNome = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,7 +72,7 @@ public class exibirTarefas extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 506, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(103, 103, 103))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,9 +144,10 @@ public class exibirTarefas extends javax.swing.JFrame {
         jPanel1.add(jLabel10);
         jLabel10.setBounds(120, 380, 80, 16);
 
-        jLabel6.setText("Logado");
+        jLabel6.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
+        jLabel6.setText("Logado: ");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(40, 30, 50, 16);
+        jLabel6.setBounds(60, 40, 90, 19);
 
         titulo.setText("Título");
         titulo.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -207,10 +210,17 @@ public class exibirTarefas extends javax.swing.JFrame {
 
         area.setColumns(20);
         area.setRows(5);
-        jScrollPane2.setViewportView(area);
+        jScrollPane3.setViewportView(area);
+
+        jPanel1.add(jScrollPane3);
+        jScrollPane3.setBounds(440, 260, 280, 170);
+
+        areaNome.setColumns(20);
+        areaNome.setRows(5);
+        jScrollPane2.setViewportView(areaNome);
 
         jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(440, 260, 280, 170);
+        jScrollPane2.setBounds(130, 40, 120, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -335,6 +345,7 @@ public class exibirTarefas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea area;
+    private javax.swing.JTextArea areaNome;
     private javax.swing.JButton botao1;
     private javax.swing.JTextField categoria;
     private javax.swing.JTextField data;
@@ -350,6 +361,7 @@ public class exibirTarefas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField titulo;
     private javax.swing.JButton voltar1;
     // End of variables declaration//GEN-END:variables
