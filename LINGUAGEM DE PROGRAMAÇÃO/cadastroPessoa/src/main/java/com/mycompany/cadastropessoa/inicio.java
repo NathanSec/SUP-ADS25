@@ -1,3 +1,6 @@
+
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -56,8 +59,6 @@ public class inicio extends javax.swing.JFrame implements Runnable{
         lbl_count.setBounds(450, 460, 520, 40);
         jPanel1.add(progressbar);
         progressbar.setBounds(450, 460, 520, 40);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\25171227\\Downloads\\paperIcon.png")); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(30, 10, 570, 560);
 

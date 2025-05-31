@@ -194,8 +194,6 @@ public class cadastro extends javax.swing.JFrame {
         int valor = JOptionPane.showConfirmDialog(null, "Deseja realmente salvar?", "Opções", JOptionPane.YES_NO_CANCEL_OPTION);
 
         if (valor == 0) {
-            Pessoa p  = new Pessoa();
-            p.setNome(nome2.getText());
             dispose();
             new menu().setVisible(true);
         } else if (valor == 2) {

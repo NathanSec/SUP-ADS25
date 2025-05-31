@@ -65,7 +65,7 @@ public class inicio extends javax.swing.JFrame implements Runnable {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\25171227\\Downloads\\checkImg.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\natha\\OneDrive\\Imagens\\checkImg.png")); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel1.setText("Gerenciador de Tarefas");
