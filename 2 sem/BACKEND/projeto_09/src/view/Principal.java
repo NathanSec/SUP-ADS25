@@ -16,7 +16,7 @@ public class Principal {
         //Vestuario v1 = new Vestuario(1,"Calca", 108, "Capri", "Azul", "Medio");
         //System.out.println(v1.print());
 
-        Roupa r1 = new Roupa(1,"Calca",100,"Capri","Azul","Grande");
-        System.out.println(r1.print());
+        //Roupa r1 = new Roupa(1,"Calca",100,"Capri","Azul","Grande");
+        //System.out.println(r1.print());
     }
 }

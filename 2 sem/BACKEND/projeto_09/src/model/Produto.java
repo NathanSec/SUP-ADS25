@@ -56,6 +56,6 @@ public abstract class Produto {
         return ret;
     }
 
-    public abstract void imprimirBoasVindas();
-    }
+    public abstract void imprimirTipoProduto();
+
 }

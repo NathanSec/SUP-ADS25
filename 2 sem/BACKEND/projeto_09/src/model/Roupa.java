@@ -26,4 +26,9 @@ public class Roupa extends Vestuario{
         ret = ret + "\nTecido: " + this.tecido;
         return ret;
     }
+
+    @Override
+    public void imprimirTipoProduto() {
+        System.out.println("Roupa");
+    }
 }

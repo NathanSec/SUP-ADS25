@@ -1,11 +1,13 @@
 package model;
 
-public class Eletronico extends Produto{
+public class Eletronico extends Produto implements iSeguranca{
     private int voltagem;
 
     public Eletronico(int c, String d, double v, int vo) {
         super(c, d, v);
         this.setVoltagem(vo);
+        this.imprimirTipoProduto();
+        this.imprimirMensagemSeguranca();
     }
 
     public int getVoltagem() {
@@ -26,5 +28,15 @@ public class Eletronico extends Produto{
         ret = super.print();
         ret = ret + "\nVoltagem: " + this.voltagem;
         return ret;
+    }
+
+    @Override
+    public void imprimirTipoProduto() {
+        System.out.println("Eletronico");
+    }
+
+    @Override
+    public void imprimirMensagemSeguranca() {
+        System.out.println("Verificar a voltagem do produto");
     }
 }

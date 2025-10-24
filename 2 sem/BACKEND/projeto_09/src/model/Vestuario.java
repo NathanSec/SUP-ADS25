@@ -1,6 +1,6 @@
 package model;
 
-public class Vestuario extends Produto{
+public abstract class Vestuario extends Produto{
 
     private String nome;
     private String cor;
